@@ -1,0 +1,53 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calculator.MainPage"
+             BackgroundColor="White">
+
+    <Grid RowDefinitions="Auto, Auto, *, *, *, *, *, *" ColumnDefinitions="*,*,*,*"
+          Padding="10" RowSpacing="10" ColumnSpacing="10">
+
+        <ScrollView Grid.Row="0" Grid.ColumnSpan="4" Margin="10">
+            <Label x:Name="HistoryLabel"
+                   Text=""
+                   TextColor="Black"
+                   FontSize="18"
+                   LineBreakMode="WordWrap"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start" />
+        </ScrollView>
+
+   
+        <Label x:Name="ResultLabel"
+               Grid.Row="1"
+               Grid.ColumnSpan="4"
+               Text="0"
+               TextColor="Black"
+               FontSize="36"
+               HorizontalOptions="End"
+               VerticalOptions="Center"
+               HorizontalTextAlignment="End"
+               Margin="20" />
+
+        <Button Text="7" Clicked="OnNumberClicked" Grid.Row="2" Grid.Column="0" />
+        <Button Text="8" Clicked="OnNumberClicked" Grid.Row="2" Grid.Column="1" />
+        <Button Text="9" Clicked="OnNumberClicked" Grid.Row="2" Grid.Column="2" />
+        <Button Text="÷" Clicked="OnOperatorClicked" Grid.Row="2" Grid.Column="3" />
+
+        <Button Text="4" Clicked="OnNumberClicked" Grid.Row="3" Grid.Column="0" />
+        <Button Text="5" Clicked="OnNumberClicked" Grid.Row="3" Grid.Column="1" />
+        <Button Text="6" Clicked="OnNumberClicked" Grid.Row="3" Grid.Column="2" />
+        <Button Text="×" Clicked="OnOperatorClicked" Grid.Row="3" Grid.Column="3" />
+
+        <Button Text="1" Clicked="OnNumberClicked" Grid.Row="4" Grid.Column="0" />
+        <Button Text="2" Clicked="OnNumberClicked" Grid.Row="4" Grid.Column="1" />
+        <Button Text="3" Clicked="OnNumberClicked" Grid.Row="4" Grid.Column="2" />
+        <Button Text="-" Clicked="OnOperatorClicked" Grid.Row="4" Grid.Column="3" />
+
+        <Button Text="0" Clicked="OnNumberClicked" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" />
+        <Button Text="." Clicked="OnNumberClicked" Grid.Row="5" Grid.Column="2" />
+        <Button Text="+" Clicked="OnOperatorClicked" Grid.Row="5" Grid.Column="3" />
+
+        <Button Text="C" Clicked="OnClearClicked" Grid.Row="6" Grid.Column="0" />
+        <Button Text="=" Clicked="OnEqualsClicked" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" />
+    </Grid>
+</ContentPage>
